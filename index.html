@@ -106,9 +106,9 @@
                         </a>
                     </div>
                     <h2 class="brand-before">
-                        <small>환영합니다!</small>
+                        <small id="born_date"></small>
                     </h2>
-                    <h1 class="brand-name">여기는 은율이네 입니다!</h1>
+                    <h1 class="brand-name">은율이네 입니다!</h1>
                     <hr class="tagline-divider">
                     <h2>
                         <small>By
@@ -123,19 +123,18 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Build a website
-                        <strong>worth visiting</strong>
+                    <h2 class="intro-text text-center">엄마 엄마!
+                        <strong>이거 이거 치킨주세요</strong>.
                     </h2>
                     <hr>
-                    <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
+                    <img class="img-responsive img-border img-left" src="img/intro_pic.jpg" alt="">
                     <hr class="visible-xs">
-                    <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
-                    <p>A huge thanks to <a href="http://join.deathtothestockphoto.com/" target="_blank">Death to the Stock Photo</a> for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <p>뭐든지 한 창 궁금해 하는 15개월차 김은율입니다. 이제 제법 먹고 싶은 것과 먹기 싫은 것도 구별하고, 자기가 먹고싶은 것을 주지 않으면 짜증도 낼 줄 압니다. 꼬물꼬물 팔다리만 움직이던 꼬꼬마가 제법 컸습니다.</p>
+                    <p>매일매일 자라는 모습이 달라져서 상당히 놀랍니다. 오늘 찍은 사진과 어제 찍은 사진이 다르고, 1개월 전, 1년 전 사진을 보면 감회가 새롭습니다. 이렇게 귀여운 꼬꼬마가 태어나 줘서 엄마, 아빠도 덕분에 어른이 됩니다. 항상 고맙고 사랑해! 은율아!</p>
                 </div>
             </div>
         </div>
-
+        <!--
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
@@ -148,7 +147,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
     <!-- /.container -->
@@ -157,7 +156,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Eunyul's Family 2015</p>
                 </div>
             </div>
         </div>
@@ -176,6 +175,15 @@
     })
     </script>
 
+    <script>
+        const BORN_DATE = new Date(2014, 3, 14);
+        const ONE_DAY = 1000 * 60 * 60 * 24;
+
+        function setDate() {
+            dday = Math.ceil((new Date() - BORN_DATE) / ONE_DAY);
+            $('#born_date').text('태어난 지 ' + dday + '일 째!');
+        }
+    </script>
 </body>
 
 </html>
